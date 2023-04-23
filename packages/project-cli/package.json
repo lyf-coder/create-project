@@ -1,0 +1,40 @@
+{
+  "name": "project-cli",
+  "version": "1.0.0",
+  "description": "project cli",
+  "bin": {
+    "project-cli": "./dist/index.js"
+  },
+  "files": [
+      "dist"
+  ],
+  "scripts": {
+      "build": "tsc",
+      "clean-build": "rm -rf dist/* && tsc",
+      "dev": "ts-node src/index.ts"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lyf-coder/create-project/packages/project-cli"
+  },
+  "keywords": [
+    "cli",
+    "project",
+    "project-cli"
+  ],
+  "devDependencies": {
+    "@types/inquirer": "^8.0.0",
+    "@types/shelljs": "^0.8.12",
+    "@types/git-clone": "^0.2.0",
+    "@types/jsonfile": "^6.1.1"
+  },
+  "dependencies": {
+    "commander": "^10.0.1",
+    "inquirer": "^8.2.3",
+    "jsonfile": "^6.1.0",
+    "shelljs": "^0.8.5",
+    "git-clone": "^0.2.0",
+    "chalk": "^4.1.2"
+  }
+}
