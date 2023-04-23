@@ -19,6 +19,6 @@ jobs:
             - run: npm i pnpm -g
             - run: pnpm i
             - run: pnpm run clean-build
-            - run: pnpm -r --no-git-checks publish
+            - run: pnpm -r --no-git-checks publish --registry=https://registry.npmjs.org/
               env:
                   NODE_AUTH_TOKEN: ${{secrets.npm_token}}
