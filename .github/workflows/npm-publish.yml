@@ -20,6 +20,5 @@ jobs:
             - run: pnpm i
             - run: pnpm run clean-build
             - name: Setup npmrc             
-              run: echo "registry=https://registry.npmjs.org/" > .npmrc
-              run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc
+              run: echo "registry=https://registry.npmjs.org/" > .npmrc && echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> .npmrc 
             - run: pnpm -r --no-git-checks --access=public publish
