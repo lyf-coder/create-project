@@ -3,6 +3,7 @@
         "module": "Node16",
         "strict": true,
         "composite": true,
+        "skipLibCheck": true,
 
         // These options are necessary so that TypeDoc can resolve references across packages
         "declaration": true,
