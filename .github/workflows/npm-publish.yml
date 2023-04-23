@@ -15,10 +15,9 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: 16
-                  registry-url: https://registry.npmjs.org/
             - run: npm i pnpm -g
             - run: pnpm i
             - run: pnpm run clean-build
+            - name: Setup npmrc
+              run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
             - run: pnpm -r --no-git-checks publish --registry=https://registry.npmjs.org/
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.npm_token}}
