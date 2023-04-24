@@ -1,6 +1,6 @@
 {
   "name": "@lyf-coder/project-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "project cli",
   "bin": {
     "project-cli": "./dist/index.js"
