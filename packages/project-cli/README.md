@@ -2,7 +2,7 @@
 
 nodejs project cli
 
-install `npm i project-cli -g`
+install `npm i @lyf-coder/project-cli -g`
 
 use: `project-cli [projectName]`
 
